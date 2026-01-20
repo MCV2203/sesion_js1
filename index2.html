@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 2</title>
+    <style>
+        .naranja {
+            border: 5px solid burlywood;
+            background-color: orange;
+            width: 100px;
+            height: 100px;
+        }
+        .shadow {
+            box-shadow: 10px 10px 10px 0px rgb(0, 0, 0);
+        }
+        .fondo {
+            background-color: rgb(151, 151, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1>HOLAAAAAAAA </h1>
+    <div class="naranja shadow">
+        <p>Movimiento naranja</p>
+    </div>
+    <script>
+        let div=document.querySelector(".shadow") //seleccionar por la class
+        console.log(div.classList) //ver que tiene
+        div.classList.add("fondo") //añadir una clase
+    </script>
+</body>
+</html>

@@ -9,12 +9,14 @@
             box-shadow: 10px 10px 10px 0px;
         }
         .cuadro {
-            border: 1px solid;
             width: 150px;
             height: 150px;
         }
         .fondo {
             background-color: red;
+        }
+        .borde5 {
+            border: 5px blue solid
         }
     </style>
 </head>
@@ -23,18 +25,41 @@
     <div class="cuadro sombra">
         <p>Hola</p>
     </div>
+    <form action="">
+        <input id="nombre" type="text" placeholder="Pon aquí tu nombre" value="Marco">
+    </form>
     <script>
-        console.log("Hola mundo!!") 
-        document.write("Hola JavaScript")
-        document.write("<h1>Titulo chuleta</h1>")
-        let miNombre="Laia"
-        document.write("Hola "+miNombre+" que tal!")
-        console.log(miNombre)
-        let div=document.querySelector(".cuadro")
-        console.log(div)
-        console.log(div.classList)
+        console.log("Hola mundo!!") //depurar en la consola
+        document.write("Hola JavaScript") //añadir texto en el documento
+        document.write("<h1>Titulo chuleta</h1>")  //añadir texto en forma de h1
+        let miNombre="Laia" //hacer que miNombre, sea Laia como una variable por primera vez
+        document.write("Hola "+miNombre+" que tal!") 
+        console.log(miNombre) //aparecer miNombre en la consola
+        miNombre="Pepa" //al ser una variable, Pepa se sobrepone a Laia
+        let div=document.querySelector(".cuadro") //seleccionar un elemento a traves de una class o id
+        const miDiv=document.querySelector(".cuadro")
+        console.log(miDiv.innerHTML) //Mirar lo que hay dentro de miDiv
+        console.log(miDiv.classList)
         div.classList.remove("sombra") //quitar clase sombra
-        div.classList.add("fondo") //añadir clase
+        div.classList.add("fondo") //añadir clase a un div
+        miDiv.classList.add("borde5") //añadir una class al miDiv
+        miDiv.innerHTML="<h1>:)</h1>" //cambiar el interior del miDiv
+        const inputNombre=document.querySelector("#nombre") //seleccionar elemento a partir de id
+        console.log(inputNombre.placeholder) //ver los elementos de inputNombre
+        inputNombre.value="Otro Nombre" //Cambiar el valor de inputNombre
+        function saludar(saludo){ //crear la funcion
+            console.log(saludo) //aplicar una variable
+        }
+        saludar("hola")
+        saludar("bacalao")
+        saludar("que pasa")
+    
+        miDiv.addEventListener("click",contador)
+        let cuenta = 0
+        function contador(){
+            console.log("cuenta vale: "+ cuenta)
+            cuenta=cuenta+1
+        }
         //Mola JS
     </script>
 </body>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio</title>
+  </head>
+  <style>
+    .borde {
+      border: 1px solid black;
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+  <body>
+    <h1>Hola Bona Tarda</h1>
+    <form action="">
+      <input
+        id="inputNombre"
+        type="text"
+        placeholder="Cuadro de texto"
+        value=""
+      />
+    </form>
+    <div class="borde" id="resultado"></div>
+
+    <script>
+      const miDiv = document.querySelector("#resultado");
+      console.log(miDiv.id);
+      miDiv.addEventListener(InputEvent, texto);
+      function texto() {
+        value = "#inputNombre";
+      }
+    </script>
+  </body>
+</html>

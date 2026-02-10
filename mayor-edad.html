@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayor de edad?</title>
+    <style>
+        .bien {
+            border: 2px rgb(0, 255, 13) solid;
+            width: 100px;
+            height: 100px;
+        }
+        .mal {
+            border: 2px rgb(255, 0, 0) solid;
+            height: 100px;
+            width: 100px;
+        }
+        .texto {
+            border: 1px solid black;
+        }
+        .boton {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>MAYOR DE EDAD?</h1>
+    <input class="texto" type="text" placeholder="Pon aqui tu edad">
+    <button class="boton">Entrar</button>
+    <div id="resultado">
+
+    </div>
+    <script>
+
+        const botonEdad = document.querySelector (".boton")
+        const inputEdad = document.querySelector (".texto")
+        console.log (botonEdad)
+        console.log (inputEdad)
+
+        botonEdad.addEventListener("click", edad)
+
+        let resultado = document.querySelector ("#resultado")
+
+        function edad (){
+            
+            if (inputEdad.value >= 18) {
+            resultado.innerHTML = ("Eres mayor")
+            resultado.classList.remove("mal")
+            resultado.classList.add("bien")
+            } else {
+            resultado.innerHTML = ("Eres menor")
+            resultado.classList.remove("bien")
+            resultado.classList.add("mal")
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coches</title>
     <style>
-        
+        img {
+            width: auto;
+            height: 300px;
+        }
     </style>
 </head>
 <body>
@@ -13,11 +16,40 @@
     
     <select name="Select" id="coches">
         
-        <option value="">Mercedes</option>
-        <option value="">Lamborgini</option>
-        <option value="">Paganni</option>
-        <option value="">Maseratti</option>
+        <option value="Mustang">Mustang</option>
+        <option value="Lamborgini">Lamborgini</option>
+        <option value="Pagani">Pagani</option>
+        <option value="Maserati">Maserati</option>
     </select>
+
     <button>Ver</button>
+
+    <div id="imagenes">
+
+    </div>
+
+    <script>
+        const selector = document.querySelector("#coches")
+        const images = document.querySelector("#imagenes")
+        const boton = document.querySelector("button")
+
+        function mostrarCoche() {
+            imagenes.innerHTML = "";
+            let coches = selector.value;
+        
+            if (coches == "Lamborgini") {
+            imagenes.innerHTML ='<img src="images/lambo.jpg" alt="">'
+            } else if (coches == "Maserati") {
+            imagenes.innerHTML ='<img src="images/maserati.jpg" alt="">'
+            } else if (coches == "Mustang") {
+            imagenes.innerHTML ='<img src="images/mustang.jpg" alt="">'
+            } else if (coches == "Pagani") {
+            imagenes.innerHTML ='<img src="images/pagani.jpg" alt="">'
+            }
+        }
+
+        boton.addEventListener ("click", mostrarCoche);
+
+    </script>
 </body>
 </html>

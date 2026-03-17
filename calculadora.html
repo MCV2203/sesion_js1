@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <style>
+
+      .calculadora {
+        background-color: rgb(68, 68, 68);
+        border: 3px solid black;
+        border-radius: 20px;
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .numeros {
+        background-color: rgb(255, 207, 153);
+        width: 130px;
+        height: 130px;
+        border: 3px solid rgb(255, 136, 0);
+        border-radius: 20px;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px
+      }
+      
+      .calculo {
+        margin: 100px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="calculo">
+
+        <div>
+        <h1>CALCULAR TABLAS</h1>
+        <input type="number" id="inp">
+        <button id="calculo">Calcular</button>
+        </div>
+        <div id="calculadora" class="calculadora">
+        <div id="numeros" class="numeros"></div>
+        </div>
+
+    </div>
+    
+    <script>
+
+      let divNumeros = "";
+      for (let cont = 1; cont <= 9; cont++) {
+        divNumeros =
+          divNumeros + `<div class="numeros" id=${cont}>${cont}</div>`;
+      }
+
+      document.querySelector("#calculadora").innerHTML = divNumeros;
+      
+    </script>
+  </body>
+</html>
